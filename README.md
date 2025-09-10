@@ -1,15 +1,2 @@
 # Java-application
-//My First Java Repository.
-<BASIC APPLICATION>
-<Doctype.html>
-<html>
-<head>
-<title>JAVA BASED APPLICATION USING SQL DATABASE</title>
-<body>
-<p>DESCRIPTION :: SIMPLE FILE MANAGEMENT SYSTEM </p>
-<h1>FMS-APP</h1>
-<h2>JAVA</h2>
-<h3>SQL</h3>
-</body>
-</head>
-</html>
+My First Java Repository.

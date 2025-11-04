@@ -1,0 +1,82 @@
+import java.util.*;
+class StudentDetails{
+      String sname;
+      int[] marks;
+      int total;
+      double percentage;
+      Character grade;
+      StudentDetails(String sname,int[] marks){
+              this.marks=marks;
+              this.sname=sname;
+              Calculate();
+      }
+      public void Calculate(){
+            total=Arrays.stream(marks).sum();
+            double maxTotal=marks.length*100;
+            percentage=(total/maxTotal)*100;
+            if(percentage>=90){
+                grade='A';
+            }else if(percentage>=75){
+                grade='B';
+            }
+            else if(percentage>=60){
+                grade='C';
+            }
+            else if(percentage>=45){
+                grade='D';
+            }
+            else if(percentage>=30){
+                grade='E';
+            }
+            else{
+                grade='F';
+            }
+      }
+      public void displyReport(){
+        System.out.println("==============================");
+        System.out.println("The ReportCard of :: "+sname);
+        System.out.println("==============================");
+        System.out.println("Student Name :: "+sname);
+        System.out.println("Marks :: "+Arrays.toString(marks));
+        System.out.println("Total :: "+total);
+        System.out.println("Grade ::"+grade);
+        System.out.println("Percentage ::"+percentage);
+        System.out.println("================================");
+      }
+}
+public class StudentReport{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Name Of Student :: ");
+        String sname=sc.nextLine();
+        int numSubjects=5;
+        int[] marks=new int[numSubjects];
+        String[] subjects={"Maths","Computers","Electrical","Drawing","Scripting"};
+        for(int i=0;i<numSubjects;i++){
+            boolean validInput=false;
+            while(!validInput){
+                System.out.print("Enter marks for ::"+subjects[i]+" 0-100 :: ");
+                try{
+                if(sc.hasNextInt()){
+                    int mark=sc.nextInt();
+                    if(mark>=0 && mark<=100){
+                        marks[i]=mark;
+                        validInput=true;
+                    }else{
+                        System.out.println("Enter the marks between 0-100");
+                    }
+                }else{
+                    sc.next();
+                    System.out.println("Enter marks as a whole  number");
+                }
+                }catch(InputMismatchException e){
+                     sc.next();                    
+                     System.out.println("! Enter A Valid Input");
+                }
+            }
+        }
+        StudentDetails sd=new StudentDetails(sname, marks);
+            sd.displyReport();
+            sc.close();
+    }
+}

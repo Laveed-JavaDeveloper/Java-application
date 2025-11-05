@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SimpleCaluclator {
+public class SimpleCalculator {
     public static double add(double a, double b){
         return a+b;
     }
@@ -25,29 +25,37 @@ public class SimpleCaluclator {
     }
     public static void main(String[] args) {
         System.out.println("===========Simple_Calculator_App===========");
-        Scanner scan=new Scanner(System.in);
-        double Calculation_Result=0;
-        boolean validOperator=true;
-        System.out.print("Enter Value For Number1 :: ");
-        double Num1=scan.nextDouble();
-        System.out.print("Enter Any One Operator  :: (+,-,/*,%) :");
-        char op=scan.next().charAt(0); 
-        System.out.print("Enter Value For Number2 :: ");
-        double Num2=scan.nextDouble();
-        if(op=='+'){
-            Calculation_Result=add(Num1,Num2);
-        }else if(op=='-'){
-             Calculation_Result=subtract(Num1,Num2);
-        }else if(op=='*'){
-             Calculation_Result=multiply(Num1,Num2);
-        }else if(op=='/'){
-             Calculation_Result=divide(Num1,Num2);
-        }else if(op=='%'){
-             Calculation_Result=mod(Num1,Num2);
-        }else{
-             System.out.println("Error: Enter Valid Operator");
-            validOperator=false;
-        }  
-        scan.close();
+        try (Scanner scan = new Scanner(System.in)) {
+            double Calculation_Result=0;
+            boolean validOperator=true;
+            System.out.print("Enter Value For Number1 :: ");
+            double Num1=scan.nextDouble();
+            System.out.print("Enter Any One Operator  :: (+,-,/*,%) :");
+            char op=scan.next().charAt(0);
+            System.out.print("Enter Value For Number2 :: ");
+            double Num2=scan.nextDouble();
+            switch (op) {
+                case '+':
+                    Calculation_Result=add(Num1,Num2);
+                    break;
+                case '-':
+                    Calculation_Result=subtract(Num1,Num2);
+                    break;
+                case '*':
+                    Calculation_Result=multiply(Num1,Num2);
+                    break;
+                case '/':
+                    Calculation_Result=divide(Num1,Num2);
+                    break;
+                case '%':
+                    Calculation_Result=mod(Num1,Num2);
+                    break;
+                default:
+                    System.out.println("Error: Enter Valid Operator");
+                    validOperator=false;
+                    break;
+            }
+            System.out.println("The Calculation Result :: "+Calculation_Result);
+        }
     }
 }

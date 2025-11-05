@@ -21,7 +21,7 @@ public class SimpleCalculator {
             System.out.println("Error modulo division by zero is not possible");
             return Double.NaN;
         }
-        return a-b;
+        return a%b;
     }
     public static void main(String[] args) {
         System.out.println("=============Simple_Calculator_App=============");

@@ -7,7 +7,7 @@ class farmer
     private static float rateOfinterest;
     static
     {
-        rateOfinterest=2.5f;
+        rateOfinterest=2.0f;
     } 
     public void acceptInput()
     {

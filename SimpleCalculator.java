@@ -24,7 +24,7 @@ public class SimpleCalculator {
         return a-b;
     }
     public static void main(String[] args) {
-        System.out.println("===========Simple_Calculator_App===========");
+        System.out.println("=============Simple_Calculator_App=============");
         try (Scanner scan = new Scanner(System.in)) {
             double Calculation_Result=0;
             boolean validOperator=true;
@@ -56,6 +56,8 @@ public class SimpleCalculator {
                     break;
             }
             System.out.println("The Calculation Result :: "+Calculation_Result);
+            System.out.println("Thank You! For Using Calculator :) ");
+            System.out.println("===============================================");
         }
     }
 }

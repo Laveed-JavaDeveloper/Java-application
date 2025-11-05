@@ -26,24 +26,24 @@ public class SimpleCaluclator {
     public static void main(String[] args) {
         System.out.println("===========Simple_Calculator_App===========");
         Scanner scan=new Scanner(System.in);
-        double Result=0;
+        double Calculation_Result=0;
         boolean validOperator=true;
-        System.out.print("Enter A Number For Number1 :: ");
+        System.out.print("Enter Value For Number1 :: ");
         double Num1=scan.nextDouble();
-        System.out.print("Enter Any One Operator :: (+,-,/*,%) :");
+        System.out.print("Enter Any One Operator  :: (+,-,/*,%) :");
         char op=scan.next().charAt(0); 
-        System.out.print("Enter A Number For Number2 :: ");
+        System.out.print("Enter Value For Number2 :: ");
         double Num2=scan.nextDouble();
         if(op=='+'){
-            Result=add(Num1,Num2);
+            Calculation_Result=add(Num1,Num2);
         }else if(op=='-'){
-             Result=subtract(Num1,Num2);
+             Calculation_Result=subtract(Num1,Num2);
         }else if(op=='*'){
-             Result=multiply(Num1,Num2);
+             Calculation_Result=multiply(Num1,Num2);
         }else if(op=='/'){
-             Result=divide(Num1,Num2);
+             Calculation_Result=divide(Num1,Num2);
         }else if(op=='%'){
-             Result=mod(Num1,Num2);
+             Calculation_Result=mod(Num1,Num2);
         }else{
              System.out.println("Error: Enter Valid Operator");
             validOperator=false;

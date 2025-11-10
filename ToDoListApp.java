@@ -11,6 +11,7 @@ public class ToDoListApp {
            System.out.println("3.Edit Task");
            System.out.println("4.Delete Task");
            System.out.println("5.Exit");
+           System.out.println("==============================");
            System.out.print("Choose an option (1-5): ");
            choice=scan.nextInt();
            scan.nextLine();
@@ -49,6 +50,7 @@ public class ToDoListApp {
                             System.out.print("Enter The Edited Task :: ");
                             String editedTask=scan.nextLine();
                             System.out.println("Edited Task :: "+editedTask);
+                            tasks.add(editedTask);
                         }else{
                             System.out.println("Invalid Task Number");
                         }

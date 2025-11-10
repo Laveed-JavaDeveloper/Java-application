@@ -27,7 +27,7 @@ class farmer
         System.out.print("TOATAL AMOUNT TO REPAY IS :: "+totalAmount);
     }
 }
-class LoanCalciApp
+class LoanCalci
 {
     public static void main(String []args)
     {

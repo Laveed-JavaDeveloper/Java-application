@@ -1,4 +1,4 @@
-package com.projects.in;
+
 import java.util.*;
 class Guesser{
 	Scanner scan=new Scanner(System.in);

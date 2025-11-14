@@ -43,9 +43,9 @@ class Umpire{
 		Player p1=new Player();
 		numFromPlayer1=p1.player1();
 		Player p2=new Player();
-		numFromPlayer2=p2.player1();
+		numFromPlayer2=p2.player2();
 		Player p3=new Player();
-	    numFromPlayer3=p3.player1();
+	    numFromPlayer3=p3.player3();
 	}
 	public void compare() {
 		if(numFromGuesser==numFromPlayer1) {
